@@ -26,6 +26,12 @@ def main():
     if choice == "EDA":
         st.subheader("Exploratory Data Analysis")
 
+        data = st.file_uploader("Upload file", type=["csv", "txt"])
+        if data is not None:
+            df = pd.read_csv(data)
+            st.dataframe(df.head())
+
+
     elif choice == "Plot":
         st.subheader("Data Visualization")
 
