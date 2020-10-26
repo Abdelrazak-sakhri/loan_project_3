@@ -28,12 +28,35 @@ def main():
 
         data = st.file_uploader("Upload file", type=["csv", "txt"])
         if data is not None:
-            df = pd.read_csv(data)
+            data.seek(0)
+            df = pd.read_csv(data, delimiter=",")
             st.dataframe(df.head())
+
+            if st.checkbox("Show shape"):
+                st.write(df.shape)
+
+            if st.checkbox("Show columns"):
+                all_columns = df.columns.to_list()
+                st.write(all_columns)
+
+            if st.checkbox("Choose column"):
+                selected_columns = st.multiselect("Select Columns", all_columns)
+                new_df = df[selected_columns]
+                st.dataframe(new_df)
+
+            if st.checkbox("Show Summary"):
+                st.write(df.describe())
+
+            if st.checkbox("Show Null Values"):
+                st.write(df.isna().sum())
 
 
     elif choice == "Plot":
         st.subheader("Data Visualization")
+
+        
+
+        
 
     elif choice == "Model Building":
         st.subheader("Building ML Model")
