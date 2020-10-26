@@ -9,12 +9,21 @@ Dans ce cadre, nous allons étudier le sujet en :
     -    mettre en évidence les valeurs manquantes
     -    remplacer les valeurs manquantes
     -    équilibrer les données
+    -    choisir les types d'algorithmes pour l'étude
     -    tester les différents modèles
     -    tirer les conclusions quand aux résultats obtenus
     -    fonctionnement en mode projet avec versionning
     -    penser à un systèmede déployment (continu ou non)
 
---------------------------------
+
+-------------------------------- Comment utiliser streamlit ------------------------
+Mise en place d'un projet avec streamlit
+    -    pip install pipenv
+    -    pipenv install streamlit==0.69.2 pandas matplotlib seaborn numpy scikit-learn
+    -    pipenv shell
+    -    streamlit run app.py
+
+-------------------------------- Project presentation ---------------------------------
 
 This project consists in making a machine learning study on the dataset loan_finance.
 In this context, we will study the subject in :
@@ -29,5 +38,16 @@ In this context, we will study the subject in :
     - draw conclusions about the results obtained
     - operation in project mode with versionning
     - think about a deployment system (continuous or not)
+
+
+------------------------- How to use Streamlit ---------------------------
+
+Mise en place d'un projet avec streamlit
+    -    pip install pipenv
+    -    pipenv install streamlit==0.69.2 pandas matplotlib seaborn numpy scikit-learn
+    -    pipenv shell
+    -    streamlit run app.py
+
+
 
 
